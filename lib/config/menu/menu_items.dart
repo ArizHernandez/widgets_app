@@ -14,7 +14,7 @@ class MenuItem {
   });
 }
 
-const List<MenuItem> appMenuItem = [
+const List<MenuItem> appMenuItems = [
   MenuItem(
     title: 'Botones',
     subTitle: 'Varios botones en Flutter',
