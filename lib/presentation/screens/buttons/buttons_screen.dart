@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:widgets_app/presentation/widgets/custom_button.dart';
 
 class ButtonsScreen extends StatelessWidget {
   static const String name = 'buttons_screen';
@@ -78,7 +79,11 @@ class _ButtonsView extends StatelessWidget {
               icon: const Icon(Icons.access_alarm_rounded),
               label: const Text("Text Button"),
             ),
-            //TODO: Add Custom Button
+            CustomButton(
+              onPressed: () {},
+              text: "Custom Button",
+              color: colors.primary,
+            ),
             IconButton(
               onPressed: () {},
               icon: const Icon(Icons.add_a_photo_rounded),
