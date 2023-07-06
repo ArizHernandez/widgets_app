@@ -51,4 +51,10 @@ const List<MenuItem> appMenuItems = [
     link: '/ui-controls',
     icon: Icons.construction_rounded,
   ),
+  MenuItem(
+    title: 'App tutorial',
+    subTitle: 'Flutter tutorial serie',
+    link: '/app-tutorial',
+    icon: Icons.bedroom_child_outlined,
+  ),
 ];
