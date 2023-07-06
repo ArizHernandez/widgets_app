@@ -45,4 +45,10 @@ const List<MenuItem> appMenuItems = [
     link: '/animated',
     icon: Icons.check_box_outlined,
   ),
+  MenuItem(
+    title: 'Ui controls + tiles',
+    subTitle: 'Flutter controls serie',
+    link: '/ui-controls',
+    icon: Icons.construction_rounded,
+  ),
 ];
