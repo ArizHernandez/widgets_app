@@ -63,4 +63,10 @@ const List<MenuItem> appMenuItems = [
     link: '/infinite',
     icon: Icons.refresh_rounded,
   ),
+  MenuItem(
+    title: 'Counter',
+    subTitle: 'Counter screen example',
+    link: '/counter',
+    icon: Icons.add,
+  ),
 ];

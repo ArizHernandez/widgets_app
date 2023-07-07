@@ -17,13 +17,14 @@ class AppTheme {
   }) : assert(selectedColor >= 0 && selectedColor < colorList.length,
             "Invalid color index");
 
-  ThemeData getTheme() {
+  ThemeData getTheme({required bool isDarkMode}) {
     return ThemeData(
       useMaterial3: true,
       colorSchemeSeed: colorList[selectedColor],
+      brightness: isDarkMode ? Brightness.dark : Brightness.light,
       appBarTheme: const AppBarTheme(
         centerTitle: false,
-      )
+      ),
     );
   }
 }
