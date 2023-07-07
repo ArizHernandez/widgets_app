@@ -11,13 +11,13 @@ final List<Color> colorList = [
 
 class AppTheme {
   final int selectedColor;
+  final bool isDarkMode;
 
-  AppTheme({
-    this.selectedColor = 0,
-  }) : assert(selectedColor >= 0 && selectedColor < colorList.length,
+  AppTheme({this.selectedColor = 0, required this.isDarkMode})
+      : assert(selectedColor >= 0 && selectedColor < colorList.length,
             "Invalid color index");
 
-  ThemeData getTheme({required bool isDarkMode}) {
+  ThemeData getTheme() {
     return ThemeData(
       useMaterial3: true,
       colorSchemeSeed: colorList[selectedColor],

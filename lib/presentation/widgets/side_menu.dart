@@ -19,19 +19,21 @@ class SideMenu extends StatefulWidget {
 class _SideMenuState extends State<SideMenu> {
   int navDrawerIndex = 0;
 
-  Iterable<NavigationDrawerDestination> getMenuListDrawer(
-      List<MenuItem> menuList) {
-    return menuList.map(
-      (menuItem) => NavigationDrawerDestination(
-        icon: Icon(menuItem.icon),
-        label: Text(menuItem.title),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
+    final colors = Theme.of(context).colorScheme;
+
     final hasNotch = MediaQuery.of(context).viewPadding.top > 35;
+
+    Iterable<NavigationDrawerDestination> getMenuListDrawer(
+        List<MenuItem> menuList) {
+      return menuList.map(
+        (menuItem) => NavigationDrawerDestination(
+          icon: Icon(menuItem.icon, color: colors.primary),
+          label: Text(menuItem.title),
+        ),
+      );
+    }
 
     return NavigationDrawer(
       selectedIndex: navDrawerIndex,
