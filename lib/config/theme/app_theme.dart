@@ -13,8 +13,10 @@ class AppTheme {
   final int selectedColor;
   final bool isDarkMode;
 
-  AppTheme({this.selectedColor = 0, required this.isDarkMode})
-      : assert(selectedColor >= 0 && selectedColor < colorList.length,
+  AppTheme({
+    this.selectedColor = 0,
+    this.isDarkMode = false,
+  }) : assert(selectedColor >= 0 && selectedColor < colorList.length,
             "Invalid color index");
 
   ThemeData getTheme() {
@@ -27,4 +29,13 @@ class AppTheme {
       ),
     );
   }
+
+  AppTheme copyWith({
+    int? selectedColor,
+    bool? isDarkMode,
+  }) =>
+      AppTheme(
+        selectedColor: selectedColor ?? this.selectedColor,
+        isDarkMode: isDarkMode ?? this.isDarkMode,
+      );
 }
